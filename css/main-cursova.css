@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,100;1,300;1,400&display=swap');
+*,h1,h2,h3,h4,h5,h6,p,ul,a{
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+html, body{
+	overflow-x: hidden;
+}
+
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #666;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+	transition: all .3s ease;
+	font-family: 'Roboto', sans-serif;
+}
+a:not(.btn):hover{
+	color: #4a98e2;
+}
+p + a:not(.btn) {
+	font-size: 13px;
+	font-weight: 700;
+}
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.25;
+	font-weight: 300;
+	color: #252525;
+}
+h1{
+	font-size: 44px;
+}
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 22px;
+}
+h4{
+	font-size: 18px;
+}
+@media (min-width: 992px){
+	h1{
+	font-size: 44px;
+	}
+	h2{
+		font-size: 33px;
+	}
+	h3{
+		font-size: 26px;
+	}
+	h4{
+		font-size: 20px;
+	}
+}
+	--Global--
+.container{
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.container_1{
+	max-width: 1280px;
+	width: 100%;
+	margin: 25 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.lead{
+	font-size: 16px;
+	color: #808080;
+	font-weight: 300;
+}
+
+@media(min-width 782px){
+	.lead{
+		font-size: 26px;
+	}
+}
+/*NAVIG*/
+.navbar{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 66px;
+	z-index: 2;
+	background-color:#585252;
+
+}
+.navbar >.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+.navbar-brand img {
+	max-width: 160px;
+	border-radius: 19px;
+}
+.navbar-nav{
+	margin-left: auto;
+}
+.navbar-nav ul{
+display: flex;
+list-style: none;
+margin-left: -15px;
+margin-right: -15px;
+}
+.navbar-nav li{
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+.navbar-nav li a {
+	color:#fff
+	text-transform: uppercase;
+	font-size: 14px;
+	opacity: .8;
+	letter-spacing: .5px;
+	transition: opacity .3s ease;
+}
+.navbar-nav li a:hover {
+	color: #ffffff;
+	opacity: 1;
+}
+@media(max-width: 400px){
+	.navbar-brand{
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
+		padding-top: 25px;
+		margin-bottom: 10px;	
+	}
+	.navbar-brand img {
+		max-width: 130px;
+	}
+	.navbar-nav{
+		margin: 0 auto;
+	}
+}
+/*BATON*/
+.btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 42px;
+	border-radius: 6px;
+	padding: 5px 35px;
+	transition: 0.1s liner;
+}
+
+.btn-primary{
+background-color: #fdda24;
+color: #201f1f;
+letter-spacing: .5px;
+text-transform: uppercase;
+font-size: 13px;
+}
+
+.btn-primary:hover {
+	background-color: #609de6;
+	transform: translate3d(0, -2px, 0);
+	color: #ffffff;
+}
+/*hero*/
+.hero {
+	position: relative;
+	display:flex;
+	align-items: center;
+	min-height: 90vh;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+}
+
+.hero:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.hero .container{
+	position: relative;
+	max-width: 800px;
+} 
+
+.hero h1 {
+	margin-bottom: 24px;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.hero p{
+	margin-bottom: 35px;
+	font-weight: 300;
+	opacity: .8;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif ;
+}
+
+
+/* slaidu na register */
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+ justify-content: center;
+}
+.services-col {
+  max-width: 100%;
+  width: 40%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+
+}
+@media (min-width: 786px) {
+  .service-col {
+    max-width: calc(100% / 3);
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.servis{
+  padding: 25px;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif ;
+}
+
+.servis img {
+  opacity: .6;
+  max-height: 90px;
+  margin-bottom: 24px;
+}
+
+.servis h4 {
+  font-weight: 400;
+  margin-bottom: 12px;
+  font-size: 28;
+}
+
+.servis p {
+  max-width: 280px;
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+/*karysel */
+
+
+/*ПОДВАЛ*/
+.footer-row {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: 'Roboto', sans-serif ;
+  background-color:#ececec ;
+}
+
+.footer-copyright {
+  opacity: .6;
+}
+
+.footer-social {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.footer-social li {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.footer-social a {
+  opacity: .6;
+}
+
+.footer-social a:hover {
+  opacity: 1;
+}
+
+.footer-social img {
+  max-width: 18px;
+}
+
+/*КОНТАКТИ*/
+.contacs-bloc{
+	display: flex;
+	 justify-content: space-around;
+	 padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+}
+
+.contacs-p{
+	width: 25%;
+}
+.contacs-p-tel{
+	width: 50%;
+	padding-bottom: 7px;
+}
+.contaks > h3{
+font-size: 36px;
+font-family: 'Roboto', sans-serif ;
+padding-bottom: 20px;
+padding-top: 15px;
+display: flex;
+	justify-content: center;
+}
+.contacs-tel{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	  padding-bottom: 25px;
+  font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+}
+/*КАК ЄТО РАБОТАЕТ*/
+
+.praci{
+display: flex;
+justify-content: center;	 
+}
+.praci  p {
+	max-width: 90%;
+	font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+ padding-bottom: 20px;
+ padding-left: 20px;
+ padding-right: 20px;
+padding-top: 25px;
+display: flex;
+justify-content: center;
+margin: 0;
+
+}
+/*Про нас */
+.pronac{
+display: block;
+	font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+
+}
+.pronac  a {
+	color: #609de6;
+	text-decoration: none;
+	transition: all .3s ease;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*ЗРОБИ ДОБРО */
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+ justify-content: center;
+}
+.services-col-2 {
+  max-width: 100%;
+  width: 30%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+}
+@media (min-width: 786px) {
+  .service-col-2 {
+    max-width: calc(100% / 3);
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.servis-2{
+	background-color: #b6bee9;
+  padding: 25px;
+  border: 1px solid #2f3ac5;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif ;
+}
+
+.servis-2 img {
+
+  max-height: 90px;
+  margin-bottom: 20px;
+}
+
+.servis-2 h4 {
+  font-weight: 400;
+  margin-bottom: 12px;
+  font-size: 28;
+}
+
+.servis-2 p {
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/*Form_1dsc*/
+.form-1{
+	display: block;
+	font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+ padding: 20px 70px ;
+ 
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #609de6;
+  margin-top: 30px;
+}
+.form-1 > h1{
+font-size: 26px;
+text-align: center;
+padding-bottom: 9px;
+}
+.form-1 input:hover {
+	    box-shadow: 0 8px 20px rgb(214 222 241 / 50%);
+    border-color: #0d8bd2;
+}
+.form-control:hover{
+	box-shadow: 0 8px 20px rgb(214 222 241 / 50%);
+    border-color: #0d8bd2;
+}
+.form-1 input:active {
+	    box-shadow: 0 8px 20px rgb(214 222 241 / 50%);
+    border-color: #0d8bd2;
+}
+.form-control:active{
+	box-shadow: 0 8px 20px rgb(214 222 241 / 50%);
+    border-color: #0d8bd2;
+}
+
+.form-control{
+width: 350px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	height: 35px;
+	border-radius: 8px ;
+
+}
+.form-control-1{
+	width: 20px;
+		margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	height: 20px;
+	border-radius: 8px; 
+	padding-right: 5px;
+}
+.btn-form{
+display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 42px;
+	border-radius: 6px;
+	padding: 5px 35px;
+	transition: 0.1s liner;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.btn-primary-form{
+background-color: #609de6;
+color: #201f1f;
+letter-spacing: .5px;
+text-transform:none;
+font-size: 16px;
+}
+.vhid{
+	font-size: 15px;
+}
+.vhid > a {
+	text-decoration: underline;
+	color: #000;
+	transition: all .3s ease;
+	font-family: 'Roboto', sans-serif;
+}
+.vhid > a:not(.btn):hover{
+	color: #4a98e2;
+}
+ .label-small{
+ 	font-size: 12px;
+ }
+.res{
+	margin-bottom: 5px;
+}
+#error {
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: red;
+}
+
+
+/*FORM_2XC,DKSCL*/
+.donate {
+	display: block;
+	align-content: center;
+	  max-width: 700px;
+  box-sizing: border-box;
+  border: .5rem solid hsl(199, 65%, 35%);
+  padding: 1.5rem 2rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin: 5% auto;
+}
+.donate input {
+  font-size: 1rem;
+}
+.donate button {
+  outline: none;
+}
+.donate__row {
+  margin-bottom: 1.5rem;
+}
+.donate__field {
+  margin-bottom: .5rem;
+}
+.donate-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.donate-btn {
+  display: inline-block;
+  margin-bottom: .5rem;
+  border: 1px solid hsl(199, 65%, 35%);
+  border-radius: 2px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+.donate-btn : hover {
+  background: hsl(199, 65%, 90%);
+  color: #000;
+}
+.donate-btn--active {
+  background: hsl(199, 65%, 35%);
+  color: #fff;
+}
+.donate-radio {
+  position: relative;
+  top: .4rem;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0;
+  border: 1px solid hsl(199, 65%, 35%);
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.donate-radio:checked::before {
+  position: absolute;
+  top: .15rem;
+  left: .2rem;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: hsl(199, 65%, 35%); 
+  border-radius: 50%;
+}
+.donate-radiolabel {
+}
+.donate-sum {
+  width: 8rem;
+}
+.donate-name {
+  min-width: 12rem;
+}
+.donate-sumbit {
+  display: inline-block;
+  border: 1px solid hsl(199, 65%, 35%);
+  border-radius: 2px;
+  padding: 0.75rem 1rem;
+  background: hsl(199, 65%, 35%);
+  box-shadow: 0 1px 1px hsl(199, 65%, 35%);
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+}
+.donate-sumbit:hover,
+.donate-sumbit:active {
+  background: hsl(199, 65%, 25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Зроби добро*/
+.zrobu-vklad{
+	max-width: 80%;
+	font-family: 'Roboto', sans-serif ;
+ font-size: 20px;
+ padding-bottom: 20px;
+ padding-left: 20px;
+ padding-right: 20px;
+padding-top: 15px;
+display: flex;
+justify-content: center;
+margin: 0;
+}
